@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FaBookOpen } from "react-icons/fa";
 const committees = ["DISEC", "AIPPM", "UNODC", "UNHRC", "CCC", "IP"];
 const ipRoles = [
   "Photographer",
@@ -36,17 +36,13 @@ export default function PreferencesStep({
   ipRole3,
   setIpRole3,
 }) {
-  const ipCount =
-    (preference1 === "IP" ? 1 : 0) + (preference2 === "IP" ? 1 : 0);
-
   const filteredCommittees2 = committees.filter(
     (c) => c !== preference1 || c === "IP"
   );
 
-  const filteredCommittees3 =
-    ipCount === 4
-      ? filteredCommittees2.filter((c) => c !== "IP")
-      : filteredCommittees2.filter((c) => c !== preference2 || c === "IP");
+  const filteredCommittees3 = filteredCommittees2.filter(
+    (c) => c !== preference2 || c === "IP"
+  );
 
   const filteredIpRoles2 = ipRoles.filter((role) => role !== ipRole1);
   const filteredIpRoles3 = filteredIpRoles2.filter((role) => role !== ipRole2);
@@ -90,16 +86,16 @@ export default function PreferencesStep({
             style={{
               padding: "8px",
               borderRadius: "8px",
-              marginRight: "10px",
               backgroundColor: "black",
               color: "white",
               fontSize: "1rem",
               fontWeight: "bold",
-              display: "inline-block",
+              display: "inline-flex",
+              alignItems: "center",
               whiteSpace: "nowrap",
             }}
           >
-            Country Matrices -&gt;
+            <FaBookOpen style={{ marginRight: "8px" }} /> Country Matrices
           </p>
         </a>
       </div>
