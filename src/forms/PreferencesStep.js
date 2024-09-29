@@ -138,14 +138,14 @@ export default function PreferencesStep({
         <div className="portfolio-preferences">
           <input
             type="text"
-            placeholder="portfolio 1"
+            placeholder="portfolio / country - 1"
             value={portfolio1Pref1}
             onChange={(e) => setportfolio1Pref1(e.target.value)}
             required
           />
           <input
             type="text"
-            placeholder="portfolio 2"
+            placeholder="portfolio / country - 2"
             value={portfolio2Pref1}
             onChange={(e) => setportfolio2Pref1(e.target.value)}
             required
@@ -195,14 +195,14 @@ export default function PreferencesStep({
         <div className="portfolio-preferences">
           <input
             type="text"
-            placeholder="portfolio 1"
+            placeholder="portfolio / country - 1"
             value={portfolio1Pref2}
             onChange={(e) => setportfolio1Pref2(e.target.value)}
             required
           />
           <input
             type="text"
-            placeholder="portfolio 2"
+            placeholder="portfolio / country - 2"
             value={portfolio2Pref2}
             onChange={(e) => setportfolio2Pref2(e.target.value)}
             required
@@ -252,14 +252,14 @@ export default function PreferencesStep({
         <div className="portfolio-preferences">
           <input
             type="text"
-            placeholder="portfolio 1"
+            placeholder="portfolio / country - 1"
             value={portfolio1Pref3}
             onChange={(e) => setportfolio1Pref3(e.target.value)}
             required
           />
           <input
             type="text"
-            placeholder="portfolio 2"
+            placeholder="portfolio / country - 2"
             value={portfolio2Pref3}
             onChange={(e) => setportfolio2Pref3(e.target.value)}
             required
