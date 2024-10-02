@@ -1,7 +1,7 @@
 import React from "react";
 import { FaRegCopy } from "react-icons/fa";
-import qrCode1 from "./QR1.jpeg";
-import qrCode2 from "./QR2.png";
+import qrCode1 from "./ManojQR.png";
+import qrCode2 from "./MansiQR.png";
 
 export default function PaymentStep({
   isVasavi,
@@ -10,7 +10,7 @@ export default function PaymentStep({
   driveLink,
   setDriveLink,
 }) {
-  const upiID = isVasavi ? "7396588789@hdfcbank" : "8309502651@ibl";
+  const upiID = isVasavi ? "aripakamanoj03@okicici" : "8309502651@ibl";
   const paymentLink = isVasavi
     ? "https://example.com/pay/1000"
     : "https://example.com/pay/1400";
