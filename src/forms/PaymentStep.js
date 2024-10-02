@@ -10,7 +10,7 @@ export default function PaymentStep({
   driveLink,
   setDriveLink,
 }) {
-  const upiID = isVasavi ? "aripakamanoj03@okicici" : "8309502651@ibl";
+  const upiID = isVasavi ? "7396588789@hdfcbank" : "8309502651@ibl";
   const paymentLink = isVasavi
     ? "https://example.com/pay/1000"
     : "https://example.com/pay/1400";
