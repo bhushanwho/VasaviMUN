@@ -10,7 +10,7 @@ export default function PaymentStep({
   driveLink,
   setDriveLink,
 }) {
-  const upiID = isVasavi ? "saiananyat-1@okhdfcbank" : "8309502651@ibl";
+  const upiID = isVasavi ? "8978966277" : "8309502651";
   const paymentLink = isVasavi
     ? "https://example.com/pay/1000"
     : "https://example.com/pay/1400";
@@ -87,7 +87,7 @@ export default function PaymentStep({
             whiteSpace: "nowrap",
           }}
         >
-          {upiID} {/* Display the UPI ID */}
+          UPI : {upiID} {/* Display the UPI ID */}
         </p>
         <FaRegCopy
           onClick={() => copyToClipboard(upiID)}
@@ -99,7 +99,7 @@ export default function PaymentStep({
         />
       </div>
 
-      <div
+      {/* <div
         style={{
           display: "flex",
           justifyContent: "center",
@@ -125,7 +125,7 @@ export default function PaymentStep({
             }}
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
