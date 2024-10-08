@@ -197,6 +197,10 @@ export default function CustomVerticalStepper() {
         alert("Please fill in your phone number.");
         return false;
       }
+      if (!munExperienceDetails) {
+        alert("Fill in MUN Experience");
+        return false;
+      }
 
       if (!phoneRegex.test(phone)) {
         alert("Phone number must be exactly 10 digits.");
