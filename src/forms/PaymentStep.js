@@ -9,6 +9,10 @@ export default function PaymentStep({
   setTransactionId,
   driveLink,
   setDriveLink,
+  recipient,
+  setRecipient,
+  utrNumber,
+  setUtrNumber,
 }) {
   const upiID = isVasavi ? "saiananyat-1@okhdfcbank" : "8309502651@ibl";
   const paymentLink = isVasavi
@@ -65,6 +69,46 @@ export default function PaymentStep({
         >
           Ensure access is not restricted
         </p>
+      </div>
+
+      {/* Dropdown for recipient */}
+      <div style={{ marginTop: "20px" }}>
+        <label htmlFor="recipient" style={{ color: "#fff", fontSize: "1rem" }}>
+          To Whom You Are Paying:
+        </label>
+        <select
+          id="recipient"
+          value={recipient}
+          onChange={(e) => setRecipient(e.target.value)}
+          style={{
+            padding: "8px",
+            fontSize: "1rem",
+            borderRadius: "4px",
+            marginLeft: "10px",
+          }}
+        >
+          <option value="Ananya">Ananya</option>
+          <option value="Mansi">Mansi</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      {/* UTR Number Input */}
+      <div style={{ marginTop: "20px" }}>
+        <input
+          type="text"
+          id="utr-number"
+          placeholder="Enter UTR Number"
+          value={utrNumber}
+          onChange={(e) => setUtrNumber(e.target.value)}
+          style={{
+            padding: "8px",
+            fontSize: "1rem",
+            borderRadius: "4px",
+            width: "100%",
+            marginBottom: "10px",
+          }}
+        />
       </div>
 
       <div

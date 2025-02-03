@@ -33,6 +33,8 @@ export default function CustomVerticalStepper() {
   const [driveLink, setDriveLink] = useState("");
   const [instituteName, setInstituteName] = useState("");
   const [munExperienceDetails, setMunExperienceDetails] = useState("");
+  const [recipient , setRecipient] = useState("");
+  const [utrNumber,setUtrNumber] = useState("");
 
   const validatePreferences = () => {
     const errors = [];
@@ -174,11 +176,15 @@ export default function CustomVerticalStepper() {
           setTransactionId={setTransactionId}
           driveLink={driveLink}
           setDriveLink={setDriveLink}
+          utrNumber={utrNumber}
+          setUtrNumber={setUtrNumber}
+          recipient={recipient}
+          setRecipient={setRecipient}
         />
       ),
     },
   ];
-
+  
   const validateStep = () => {
     if (activeStep === 0) {
       const phoneRegex = /^[0-9]{10}$/;
@@ -330,11 +336,13 @@ export default function CustomVerticalStepper() {
         ipRole3,
         transactionId,
         driveLink,
+        utrNumber,        
+        recipient,        
       };
 
       console.log("Submitting form data:", formData);
 
-      fetch("https://mun-registration.vercel.app/register", {
+      fetch("http://localhost:5001/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
