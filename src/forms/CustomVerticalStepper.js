@@ -342,7 +342,7 @@ export default function CustomVerticalStepper() {
 
       console.log("Submitting form data:", formData);
 
-      fetch("http://localhost:5001/submit", {
+      fetch("https://mun-backend-1w05op7e0-viveak910s-projects.vercel.app/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
