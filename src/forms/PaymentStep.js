@@ -1,5 +1,7 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import { FaRegCopy } from "react-icons/fa";
+
 //import qrCode1 from "./AnanyaQR.png";
 //import qrCode2 from "./MansiQR.png";
 
@@ -13,14 +15,35 @@ export default function PaymentStep({
   setRecipient,
   utrNumber,
   setUtrNumber,
+  upiData,
+  setUpiData,
 }) {
-  const upiID = isVasavi ? "saiananyat-1@okhdfcbank" : "8309502651@ibl";
+ 
+  
+  
+  //const upiID = isVasavi ? "saiananyat-1@okhdfcbank" : "8309502651@ibl";
   const paymentLink = isVasavi
     ? "https://example.com/pay/1000"
     : "https://example.com/pay/1400";
 
   //const QR = isVasavi ? qrCode1 : qrCode2;
   const no = isVasavi ? "8978966277" : "8309502651";
+  useEffect(() => {
+    fetch("https://mun-dat.onrender.com/upi/available", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setUpiData(data.upiData);  // Set UPI ID from the response
+        setRecipient(data.recipient);  // Set recipient name from the response
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text).then(() => {
@@ -72,7 +95,7 @@ export default function PaymentStep({
       </div>
 
       {/* Dropdown for recipient */}
-      <div style={{ marginTop: "20px" }}>
+      {/* <div style={{ marginTop: "20px" }}>
         <label htmlFor="recipient" style={{ color: "#fff", fontSize: "1rem" }}>
           To Whom You Are Paying:
         </label>
@@ -91,7 +114,7 @@ export default function PaymentStep({
           <option value="Mansi">Mansi</option>
           <option value="Other">Other</option>
         </select>
-      </div>
+      </div> */}
 
       {/* UTR Number Input */}
       <div style={{ marginTop: "20px" }}>
@@ -139,10 +162,10 @@ export default function PaymentStep({
               whiteSpace: "nowrap",
             }}
           >
-            {upiID}
+            {upiData}
           </p>
           <FaRegCopy
-            onClick={() => copyToClipboard(upiID)}
+            onClick={() => copyToClipboard(upiData)}
             style={{
               cursor: "pointer",
               fontSize: "1.5rem",

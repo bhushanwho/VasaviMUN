@@ -35,6 +35,7 @@ export default function CustomVerticalStepper() {
   const [munExperienceDetails, setMunExperienceDetails] = useState("");
   const [recipient , setRecipient] = useState("");
   const [utrNumber,setUtrNumber] = useState("");
+  const [upiData, setUpiData] = useState("");
 
   const validatePreferences = () => {
     const errors = [];
@@ -180,6 +181,8 @@ export default function CustomVerticalStepper() {
           setUtrNumber={setUtrNumber}
           recipient={recipient}
           setRecipient={setRecipient}
+          upiData={upiData}
+          setUpiData={setUpiData}
         />
       ),
     },
@@ -337,12 +340,14 @@ export default function CustomVerticalStepper() {
         transactionId,
         driveLink,
         utrNumber,        
-        recipient,        
+        recipient,  
+        upiData,
+      
       };
 
       console.log("Submitting form data:", formData);
 
-      fetch("https://mun-dat.vercel.app/register", {
+      fetch("https://mun-dat.onrender.com/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -391,6 +396,8 @@ export default function CustomVerticalStepper() {
     setTransactionId("");
     setDriveLink("");
     setActiveStep(0);
+    setUtrNumber("");
+    setRecipient("");
   };
 
   return (
