@@ -136,6 +136,10 @@ export default function CustomVerticalStepper() {
           setInstituteName={setInstituteName}
           munExperienceDetails={munExperienceDetails}
           setMunExperienceDetails={setMunExperienceDetails}
+          upiData={upiData}
+          setUpiData={setUpiData}
+          recipient={recipient}
+          setRecipient={setRecipient}
         />
       ),
     },
@@ -179,10 +183,7 @@ export default function CustomVerticalStepper() {
           setDriveLink={setDriveLink}
           utrNumber={utrNumber}
           setUtrNumber={setUtrNumber}
-          recipient={recipient}
-          setRecipient={setRecipient}
           upiData={upiData}
-          setUpiData={setUpiData}
         />
       ),
     },

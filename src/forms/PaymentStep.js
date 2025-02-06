@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect, useState } from "react";
 import { FaRegCopy } from "react-icons/fa";
 
 //import qrCode1 from "./AnanyaQR.png";
@@ -11,12 +10,9 @@ export default function PaymentStep({
   setTransactionId,
   driveLink,
   setDriveLink,
-  recipient,
-  setRecipient,
   utrNumber,
   setUtrNumber,
   upiData,
-  setUpiData,
 }) {
  
   
@@ -28,22 +24,7 @@ export default function PaymentStep({
 
   //const QR = isVasavi ? qrCode1 : qrCode2;
   const no = isVasavi ? "8978966277" : "8309502651";
-  useEffect(() => {
-    fetch("https://mun-dat.onrender.com/upi/available", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setUpiData(data.upiData);  // Set UPI ID from the response
-        setRecipient(data.recipient);  // Set recipient name from the response
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, []);
+  
 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text).then(() => {
@@ -162,7 +143,7 @@ export default function PaymentStep({
               whiteSpace: "nowrap",
             }}
           >
-            {upiData}
+          {upiData ? upiData : "Loading..."}
           </p>
           <FaRegCopy
             onClick={() => copyToClipboard(upiData)}

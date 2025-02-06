@@ -1,5 +1,6 @@
 import React from "react";
 import "./form.css";
+import { useEffect } from "react";
 
 
 export default function PersonalDetailsStep({
@@ -25,7 +26,33 @@ export default function PersonalDetailsStep({
   setMunExperienceDetails,
   instituteName,
   setInstituteName,
+  setUpiData,
+  setRecipient,
+  recipient,
+  upiData
 }) {
+ 
+  useEffect(() => {
+    const fetchUpiData = async () => {
+      try {
+        const response = await fetch("https://mun-dat.onrender.com/upi/available", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+  
+        const data = await response.json();
+        setUpiData(data.upiData);  // Set UPI ID from the response
+        setRecipient(data.recipient);  // Set recipient name from the response
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+  
+    fetchUpiData();
+  }, []); // Dependency array remains empty
+  
   return (
     <div>
       <input
