@@ -286,7 +286,7 @@ export default function CustomVerticalStepper() {
         alert("Please enter a valid Google Drive link.");
         return false;
       }
-      const utrvadilation =  /^\d{10}(K)?$/;
+      const utrvadilation = /^(?:\d{10})?$/;
       if(!utrvadilation.test(utrNumber)){
         alert("Please enter a valid UTR number");
         return false;

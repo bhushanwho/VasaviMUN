@@ -106,6 +106,13 @@ export default function PaymentStep({
             marginBottom: "10px",
           }}
         />
+        <p
+        style={{
+          marginTop: "5px",
+          fontSize: "0.9rem",
+          color: "#fff",
+        }}
+        >leave empty if not paid through phonepe</p>
       </div>
 
       <div
