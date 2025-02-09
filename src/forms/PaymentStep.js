@@ -41,14 +41,7 @@ export default function PaymentStep({
       </h2>
       <div className="hd">
         <label className="btn">
-          <a
-            href={paymentLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none" }}
-          >
             <h3>Payment</h3>
-          </a>
         </label>
         <input
           type="text"
