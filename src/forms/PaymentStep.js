@@ -112,7 +112,7 @@ export default function PaymentStep({
           fontSize: "0.9rem",
           color: "#fff",
         }}
-        >leave empty if not paid through phonepe</p>
+        >leave empty if not available or invalid</p>
       </div>
 
       <div
