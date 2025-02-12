@@ -278,20 +278,13 @@ export default function CustomVerticalStepper() {
         alert("Drive link is required.");
         return false;
       }
-      const driveFilePattern = /^https:\/\/drive\.google\.com\/file\/d\/[-\w]+\/view(?:\?[^/]+)?$/;
-      const driveFolderPattern = /^https:\/\/drive\.google\.com\/drive\/folders\/[-\w]+(?:\?.*)?$/;
-      const sharedDriveFilePattern = /^https:\/\/drive\.google\.com\/drive\/folders\/[-\w]+\/d\/[-\w]+\/view(?:\?[^/]+)?$/;
-      const driveOpenPattern = /^https:\/\/drive\.google\.com\/open\?id=[-\w]+(?:&.*)?$/;
-    
-  if (
-    driveFilePattern.test(driveLink) ||
-    driveFolderPattern.test(driveLink) ||
-    sharedDriveFilePattern.test(driveLink) ||
-    driveOpenPattern.test(driveLink)
-  ){
-    alert("make the drive link public and paste the new drive link which ends with /view or enter the valid drive link");
-    return false;
-  }
+      const driveUrlPattern =
+        /https:\/\/drive\.google\.com\/(?:file\/d\/|drive\/folders\/)([-\w]+)/;
+
+      if (!driveUrlPattern.test(driveLink)) {
+        alert("make the drive link public and paste the new drive link which ends with /view or enter the valid drive link");
+        return false;
+      }
       const utrvadilation = /^(?:\d{10})?$/;
       if(!utrvadilation.test(utrNumber)){
         alert("Please enter a valid UTR number");
