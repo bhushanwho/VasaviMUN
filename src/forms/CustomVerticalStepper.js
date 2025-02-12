@@ -281,10 +281,7 @@ export default function CustomVerticalStepper() {
       const driveUrlPattern =
         /https:\/\/drive\.google\.com\/(?:file\/d\/|drive\/folders\/)([-\w]+)/;
 
-      if (!driveUrlPattern.test(driveLink)) {
-        alert("make the drive link public and paste the new drive link which ends with /view or enter the valid drive link");
-        return false;
-      }
+      
       const utrvadilation = /^(?:\d{10})?$/;
       if(!utrvadilation.test(utrNumber)){
         alert("Please enter a valid UTR number");
