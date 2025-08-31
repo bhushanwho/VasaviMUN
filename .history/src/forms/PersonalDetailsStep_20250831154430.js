@@ -178,18 +178,6 @@ export default function PersonalDetailsStep({
           
           <input
             type="text"
-            placeholder="Lab Batch (1 or 2)"
-            value={labBatch}
-            onChange={(e) => setLabBatch(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="ECA"
-            value={eca}
-            onChange={(e) => setEca(e.target.value)}
-          />
-          <input
-            type="text"
             placeholder="Section"
             value={section}
             onChange={(e) => setSection(e.target.value)}

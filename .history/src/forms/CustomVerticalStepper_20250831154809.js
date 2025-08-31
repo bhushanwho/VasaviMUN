@@ -138,8 +138,7 @@ export default function CustomVerticalStepper() {
           setBranch={setBranch}
           labBatch={labBatch}
           setLabBatch={setLabBatch}
-          eca={eca}
-          setEca={setEca}
+          
           section={section}
           setSection={setSection}
           instituteName={instituteName}

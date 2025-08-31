@@ -23,10 +23,8 @@ export default function PersonalDetailsStep({
   setBranch,
   section,
   setSection,
-  labBatch,
+  Lab Batch,
   setLabBatch,
-  eca,
-  setEca,
   munExperienceDetails,
   setMunExperienceDetails,
   instituteName,
@@ -175,19 +173,6 @@ export default function PersonalDetailsStep({
             <option value="MECHANICAL">MECHANICAL</option>
             <option value="IT">IT</option>
           </select>
-          
-          <input
-            type="text"
-            placeholder="Lab Batch (1 or 2)"
-            value={labBatch}
-            onChange={(e) => setLabBatch(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="ECA"
-            value={eca}
-            onChange={(e) => setEca(e.target.value)}
-          />
           <input
             type="text"
             placeholder="Section"

@@ -40,8 +40,7 @@ export default function CustomVerticalStepper() {
   // setLabBatch,
   // eca,
   // setEca,
-  const [labBatch, setLabBatch] = useState("");
-  const [eca, setEca] = useState("");
+  const []
 
   const validatePreferences = () => {
     const errors = [];
@@ -136,10 +135,6 @@ export default function CustomVerticalStepper() {
           setYear={setYear}
           branch={branch}
           setBranch={setBranch}
-          labBatch={labBatch}
-          setLabBatch={setLabBatch}
-          eca={eca}
-          setEca={setEca}
           section={section}
           setSection={setSection}
           instituteName={instituteName}
