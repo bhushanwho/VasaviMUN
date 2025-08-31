@@ -23,7 +23,7 @@ export default function PaymentStep({
     : "https://example.com/pay/1400";
 
   //const QR = isVasavi ? qrCode1 : qrCode2;
-  const no = isVasavi ? "8897327157" : "8125192190";
+  const no = isVasavi ? "" : "9866096974";
   
 
   const copyToClipboard = (text) => {

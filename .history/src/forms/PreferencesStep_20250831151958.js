@@ -6,8 +6,7 @@ const ipRoles = [
   "Reporter - DISEC",
   "Reporter - AIPPM",
   "Reporter - UNCSW",
-  "Reporter - CCC",
-  "Reporter - ECOSOC",
+  "Reporter - WHO",
 ];
 
 export default function PreferencesStep({
@@ -75,7 +74,7 @@ export default function PreferencesStep({
           <h3>Committee Preference</h3>
         </label>
         <a
-          href="https://docs.google.com/spreadsheets/d/1ky95En31kh9bPilrmpr-KDiAzhIRpgWo3IeF1MmnNf8/edit?gid=128263296#gid=128263296"
+          href="https://docs.google.com/spreadsheets/d/1aHaViFRhta206z6MnRgMNkTvMsh_7UvUDxbC16DdMrI/edit?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           style={{

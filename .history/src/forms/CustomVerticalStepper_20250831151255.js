@@ -282,11 +282,11 @@ export default function CustomVerticalStepper() {
         /https:\/\/drive\.google\.com\/(?:file\/d\/|drive\/folders\/)([-\w]+)/;
 
       
-      // const utrvadilation = /^(?:\d{12})?$/;
-      // if(!utrvadilation.test(utrNumber)){
-      //   alert("Please enter a valid UTR number");
-      //   return false;
-      // }
+      const utrvadilation = /^(?:\d{12})?$/;
+      if(!utrvadilation.test(utrNumber)){
+        alert("Please enter a valid UTR number");
+        return false;
+      }
     }
 
     return true;
