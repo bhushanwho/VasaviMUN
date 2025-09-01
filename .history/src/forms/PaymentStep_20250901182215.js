@@ -37,7 +37,7 @@ export default function PaymentStep({
       <h2>
         {isVasavi
           ? "Pay the registration fee of ₹1000"
-          : "Pay the registration fee of ₹1400"}
+          : "Pay the registration fee of ₹1700"}
       </h2>
       <div className="hd">
         <label className="btn">
