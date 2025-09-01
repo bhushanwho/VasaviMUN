@@ -1,6 +1,6 @@
 # VasaviMUN
 
-## [CRA to vite migration reference](https://www.robinwieruch.de/vite-create-react-app/)
+[CRA to vite migration reference](https://www.robinwieruch.de/vite-create-react-app/)
 
 ## run locally
 ```bash
